@@ -5,29 +5,29 @@
 class Sec < Formula
   desc "Store secrets in AWS Parameter Store."
   homepage "https://github.com/grimdork/sec"
-  version "0.7.5"
+  version "0.7.6"
   license "MIT"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/grimdork/sec/releases/download/v0.7.5/sec_0.7.5_Darwin_x86_64.zip"
-      sha256 "0edac3d47aa0f068fa0c6da5f4480bc41f608c36517a4a9a13ae384e059d7bc7"
+      url "https://github.com/grimdork/sec/releases/download/v0.7.6/sec_0.7.6_Darwin_x86_64.zip"
+      sha256 "c898f9e58893b7ef946924a179b97cfcc7d1efbea16cdbcca2a465f762c9e24c"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/grimdork/sec/releases/download/v0.7.5/sec_0.7.5_Darwin_arm64.zip"
-      sha256 "a1e5725582aa7009b93f62227e414c2afeae7248284766950ec9bd8fe23cd972"
+      url "https://github.com/grimdork/sec/releases/download/v0.7.6/sec_0.7.6_Darwin_arm64.zip"
+      sha256 "e3af61c70d0d4b4aa1b7ee124d9c4386b277c45f11012924c57c2d590e30a14e"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/grimdork/sec/releases/download/v0.7.5/sec_0.7.5_Linux_x86_64.tar.gz"
-      sha256 "2c1311adad5262c7d9f5a9e0d4b2762ef2d38d7d0b69bd1824bc3f97bae1042c"
+      url "https://github.com/grimdork/sec/releases/download/v0.7.6/sec_0.7.6_Linux_x86_64.tar.gz"
+      sha256 "5aa649575fdd467684e820f3ffca90f4413fced00e75e540a57af31ed4487414"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/grimdork/sec/releases/download/v0.7.5/sec_0.7.5_Linux_arm64.tar.gz"
-      sha256 "a8ec2930b1497bf33641bc6721dc4250079e4f3b2294d3051f903c4fdf17e1b4"
+      url "https://github.com/grimdork/sec/releases/download/v0.7.6/sec_0.7.6_Linux_arm64.tar.gz"
+      sha256 "17871483a5526a26917496c6b0de35dc99fa2b902ac842c3f9b669e1b7edb0bc"
     end
   end
 
