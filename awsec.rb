@@ -5,29 +5,29 @@
 class Awsec < Formula
   desc "Store secrets in AWS Parameter Store."
   homepage "https://github.com/grimdork/awsec"
-  version "0.10.0"
+  version "0.10.1"
   license "MIT"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/grimdork/awsec/releases/download/v0.10.0/awsec_0.10.0_Darwin_x86_64.tar.xz"
-      sha256 "240fd6bfe5d34dfa90e73e39f17c6108b0054f9b24709c4aea42a3bfe424f132"
+      url "https://github.com/grimdork/awsec/releases/download/v0.10.1/awsec_0.10.1_Darwin_x86_64.tar.xz"
+      sha256 "c9d505afd4aadddc5268253d7fa8d09a07c6ab0ab4c3893876844ec580e84f47"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/grimdork/awsec/releases/download/v0.10.0/awsec_0.10.0_Darwin_arm64.tar.xz"
-      sha256 "60bba0d2966e0b30ef6e511aeec0f9fadc378ebfeb0ec3e810105eb79efb2f04"
+      url "https://github.com/grimdork/awsec/releases/download/v0.10.1/awsec_0.10.1_Darwin_arm64.tar.xz"
+      sha256 "7ee6d08fd12371bcece9ff72ffd94d722b3e971c2a6feb86da71524b4a6e6114"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/grimdork/awsec/releases/download/v0.10.0/awsec_0.10.0_Linux_x86_64.tar.xz"
-      sha256 "a3c48dc67bcd2f98e3ac55323785578c63b10056ffab1d6279ccebf5f086e28a"
+      url "https://github.com/grimdork/awsec/releases/download/v0.10.1/awsec_0.10.1_Linux_x86_64.tar.xz"
+      sha256 "279e47112200ad6e088f2c65ea396782acc0885de4132a713f05eae47f8b6e77"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/grimdork/awsec/releases/download/v0.10.0/awsec_0.10.0_Linux_arm64.tar.xz"
-      sha256 "26c51465c03467221e4e7a014d8497b5dc5795606ebc0b18a74318e9c85b017e"
+      url "https://github.com/grimdork/awsec/releases/download/v0.10.1/awsec_0.10.1_Linux_arm64.tar.xz"
+      sha256 "76461a56f2f92ddc3be2f50e03d8c43ee034141bfa2e8232ea98da480dd9b0a8"
     end
   end
 
