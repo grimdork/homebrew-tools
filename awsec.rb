@@ -5,21 +5,21 @@
 class Awsec < Formula
   desc "Store secrets in AWS Parameter Store."
   homepage "https://github.com/grimdork/awsec"
-  version "0.10.4"
+  version "0.10.5"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/grimdork/awsec/releases/download/v0.10.4/awsec_0.10.4_Darwin_arm64.tar.xz"
-      sha256 "51e7040f04673f8b7b3a1370a77ba37df28c99c0559406a379ffed8ce58638d7"
+    if Hardware::CPU.intel?
+      url "https://github.com/grimdork/awsec/releases/download/v0.10.5/awsec_0.10.5_Darwin_x86_64.tar.xz"
+      sha256 "1eb3d18ca78fe284b0b2fd2c531da30ec4f7dccd65222f77f23c1f4c94718ada"
 
       def install
         bin.install "awsec"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/grimdork/awsec/releases/download/v0.10.4/awsec_0.10.4_Darwin_x86_64.tar.xz"
-      sha256 "75e4eae854211f2620eb9d7cd5b135f7fbbcedff8d83c261e8840c5d2e4309cf"
+    if Hardware::CPU.arm?
+      url "https://github.com/grimdork/awsec/releases/download/v0.10.5/awsec_0.10.5_Darwin_arm64.tar.xz"
+      sha256 "a7ba828aff0b0726eb6f11fa6e435311642d25cde500e867816106905178a0b8"
 
       def install
         bin.install "awsec"
@@ -29,16 +29,16 @@ class Awsec < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/grimdork/awsec/releases/download/v0.10.4/awsec_0.10.4_Linux_arm64.tar.xz"
-      sha256 "bb5c0e8e3b2978e5b3074d432ff104fc0ec559cea75fc99e375458c84b1c11a8"
+      url "https://github.com/grimdork/awsec/releases/download/v0.10.5/awsec_0.10.5_Linux_arm64.tar.xz"
+      sha256 "4dca934c79ad8aee45438189239184d84c32ffceda1b42715e959eaeb5912a2c"
 
       def install
         bin.install "awsec"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/grimdork/awsec/releases/download/v0.10.4/awsec_0.10.4_Linux_x86_64.tar.xz"
-      sha256 "031311c3c31c19a0edaddc50db3db9daf16092971efb1f36b44e5f37c0112f7d"
+      url "https://github.com/grimdork/awsec/releases/download/v0.10.5/awsec_0.10.5_Linux_x86_64.tar.xz"
+      sha256 "ee8d302f1a05fc00bacec9aad66eb3299820b9ec76d6eeb56de16128994d5404"
 
       def install
         bin.install "awsec"
