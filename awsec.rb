@@ -5,21 +5,21 @@
 class Awsec < Formula
   desc "Store secrets in AWS Parameter Store."
   homepage "https://github.com/grimdork/awsec"
-  version "0.11.0"
+  version "0.11.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/grimdork/awsec/releases/download/v0.11.0/awsec_0.11.0_Darwin_arm64.tar.xz"
-      sha256 "ac05844e4cd9011e046933d1d15c2bb8fbfb8154b1b8c3b54d128c61594e40f1"
+      url "https://github.com/grimdork/awsec/releases/download/v0.11.1/awsec_0.11.1_Darwin_arm64.tar.xz"
+      sha256 "e049ff42992f951f82e848d831fe754409d9a4deab381505476543e669fef2db"
 
       def install
         bin.install "awsec"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/grimdork/awsec/releases/download/v0.11.0/awsec_0.11.0_Darwin_x86_64.tar.xz"
-      sha256 "9d71ef3c080fe37f1c9bcfb9a004336d91f3b156f43a9fca1aa4d7fefbe95ffa"
+      url "https://github.com/grimdork/awsec/releases/download/v0.11.1/awsec_0.11.1_Darwin_x86_64.tar.xz"
+      sha256 "31d1086d1d4561e4e3740692622dd59d8371569055450bf96bbe8a73200eb63d"
 
       def install
         bin.install "awsec"
@@ -28,17 +28,17 @@ class Awsec < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/grimdork/awsec/releases/download/v0.11.0/awsec_0.11.0_Linux_arm64.tar.xz"
-      sha256 "a68314dd0f91dc75d2c0c777167918e2442c6aaecc684a94b17d6df5e029d936"
+    if Hardware::CPU.intel?
+      url "https://github.com/grimdork/awsec/releases/download/v0.11.1/awsec_0.11.1_Linux_x86_64.tar.xz"
+      sha256 "d2e1199dd35e4246336173726a457f9f70419b537412519f3684e08a56e17671"
 
       def install
         bin.install "awsec"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/grimdork/awsec/releases/download/v0.11.0/awsec_0.11.0_Linux_x86_64.tar.xz"
-      sha256 "2c6be296f6f7b5acf5d8c05346e2083198bd0f6efbc296ba04bfd01e48b9f0fb"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/grimdork/awsec/releases/download/v0.11.1/awsec_0.11.1_Linux_arm64.tar.xz"
+      sha256 "5f38b4c6a72cd2471b81f4e8a1fc57146fa0cb2f10b75092f98f6cf744d1c89f"
 
       def install
         bin.install "awsec"
