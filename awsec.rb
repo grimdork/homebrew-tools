@@ -5,21 +5,21 @@
 class Awsec < Formula
   desc "Store secrets in AWS Parameter Store."
   homepage "https://github.com/grimdork/awsec"
-  version "0.10.6"
+  version "0.11.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/grimdork/awsec/releases/download/v0.10.6/awsec_0.10.6_Darwin_arm64.tar.xz"
-      sha256 "fa67cc6961cb6d83689285ee2963d112bac24823099a3e1c0209fb290e3654bb"
+      url "https://github.com/grimdork/awsec/releases/download/v0.11.0/awsec_0.11.0_Darwin_arm64.tar.xz"
+      sha256 "ac05844e4cd9011e046933d1d15c2bb8fbfb8154b1b8c3b54d128c61594e40f1"
 
       def install
         bin.install "awsec"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/grimdork/awsec/releases/download/v0.10.6/awsec_0.10.6_Darwin_x86_64.tar.xz"
-      sha256 "f93757be25d803cf785012b33c703a3f9dd21d9574bb37241fa4981a9efcb394"
+      url "https://github.com/grimdork/awsec/releases/download/v0.11.0/awsec_0.11.0_Darwin_x86_64.tar.xz"
+      sha256 "9d71ef3c080fe37f1c9bcfb9a004336d91f3b156f43a9fca1aa4d7fefbe95ffa"
 
       def install
         bin.install "awsec"
@@ -29,16 +29,16 @@ class Awsec < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/grimdork/awsec/releases/download/v0.10.6/awsec_0.10.6_Linux_arm64.tar.xz"
-      sha256 "1610f658906b9718f7cc8b187feae132d203de37432c6f523aecb1841b1f0832"
+      url "https://github.com/grimdork/awsec/releases/download/v0.11.0/awsec_0.11.0_Linux_arm64.tar.xz"
+      sha256 "a68314dd0f91dc75d2c0c777167918e2442c6aaecc684a94b17d6df5e029d936"
 
       def install
         bin.install "awsec"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/grimdork/awsec/releases/download/v0.10.6/awsec_0.10.6_Linux_x86_64.tar.xz"
-      sha256 "958bd1e10faf8970f458a2ecf728c5eac207ed60b79e23859d06a6f55b131958"
+      url "https://github.com/grimdork/awsec/releases/download/v0.11.0/awsec_0.11.0_Linux_x86_64.tar.xz"
+      sha256 "2c6be296f6f7b5acf5d8c05346e2083198bd0f6efbc296ba04bfd01e48b9f0fb"
 
       def install
         bin.install "awsec"
