@@ -11,7 +11,7 @@ class Foreman < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/grimdork/foreman/releases/download/v0.1.0/foreman_0.1.0_Darwin_arm64.tar.xz"
-      sha256 "a208089ba7a9209a8a1225684de5da5ebbfd59485ec70627afb71375a1f0e942"
+      sha256 "7f9e7db2a9dd64e1238dc1a9742c032f7561b079aa7305cd4878a6c83431a92c"
 
       def install
         bin.install "foreman"
@@ -19,7 +19,7 @@ class Foreman < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/grimdork/foreman/releases/download/v0.1.0/foreman_0.1.0_Darwin_x86_64.tar.xz"
-      sha256 "9b9e9e13a1162a68f8e7d4f6e2e3360b1a6b0c3280d03ce7a5d5ceab4d19b923"
+      sha256 "4a359b1e83287763a89904462dbbb53fb43a8881d5011c4b7d6d43f19bb37a6f"
 
       def install
         bin.install "foreman"
@@ -28,17 +28,17 @@ class Foreman < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/grimdork/foreman/releases/download/v0.1.0/foreman_0.1.0_Linux_arm64.tar.xz"
-      sha256 "960279c799b26a9583e309eb3b10142e1791647e54a7de4c7a60db02137899eb"
+    if Hardware::CPU.intel?
+      url "https://github.com/grimdork/foreman/releases/download/v0.1.0/foreman_0.1.0_Linux_x86_64.tar.xz"
+      sha256 "00536d0abc3cb06fda859cdf7f430e45332e84e2adc721b28b9c1620cb9d1381"
 
       def install
         bin.install "foreman"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/grimdork/foreman/releases/download/v0.1.0/foreman_0.1.0_Linux_x86_64.tar.xz"
-      sha256 "3f73bad8fd7552759e42f8d04d99e14ff0dcb793b918da0876393d2930f124f8"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/grimdork/foreman/releases/download/v0.1.0/foreman_0.1.0_Linux_arm64.tar.xz"
+      sha256 "4744383749b69bb50af6930ff7e718766790693c3cc5c9cdab6588dfd06fd1d9"
 
       def install
         bin.install "foreman"
