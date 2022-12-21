@@ -5,21 +5,21 @@
 class Name < Formula
   desc "Merges functionality of the dirname and basename shell commands with a few extra features."
   homepage "https://github.com/Urethramancer/name"
-  version "1.0.0"
+  version "1.0.2"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/grimdork/name/releases/download/v1.0.0/name_1.0.0_Darwin_arm64.tar.xz"
-      sha256 "d44844e7094aba46948faadf9c2737c226fa1deb42bfbd1fa69e592722559c5b"
+    if Hardware::CPU.intel?
+      url "https://github.com/grimdork/name/releases/download/v1.0.2/name_1.0.2_Darwin_x86_64.tar.xz"
+      sha256 "e0f01875568928e16ec8c8b1443903911e94fbcc736951e7a53ec191e1fc11be"
 
       def install
         bin.install "name"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/grimdork/name/releases/download/v1.0.0/name_1.0.0_Darwin_x86_64.tar.xz"
-      sha256 "b0b80ee7c7e9f748a3951105c225cfc1c2b6233354cbb14be23e13ed99e9c107"
+    if Hardware::CPU.arm?
+      url "https://github.com/grimdork/name/releases/download/v1.0.2/name_1.0.2_Darwin_arm64.tar.xz"
+      sha256 "e56b37c9ec43e383ccde3c7565a41e751af1a84f6bbd8de94f8a5a17e9d92dd1"
 
       def install
         bin.install "name"
@@ -28,17 +28,17 @@ class Name < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/grimdork/name/releases/download/v1.0.0/name_1.0.0_Linux_x86_64.tar.xz"
-      sha256 "67f4aaf00141917f9a929d701488ba6f7a85135935bd8d6ff93486957094c3af"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/grimdork/name/releases/download/v1.0.2/name_1.0.2_Linux_arm64.tar.xz"
+      sha256 "52af95dd9a4db0f5361099b6d09e5038e8711d902af2255fd5f7ad13862f6448"
 
       def install
         bin.install "name"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/grimdork/name/releases/download/v1.0.0/name_1.0.0_Linux_arm64.tar.xz"
-      sha256 "fdbdb616c919b53c2ab56accf6a6f349ceb0acc7c8406ecaf1d66407a263fb21"
+    if Hardware::CPU.intel?
+      url "https://github.com/grimdork/name/releases/download/v1.0.2/name_1.0.2_Linux_x86_64.tar.xz"
+      sha256 "9ebd67aae0006e013fb0a6e6575a4fd1f2ec054675f11afd9e6816b05a3eeeda"
 
       def install
         bin.install "name"
