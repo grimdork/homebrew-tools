@@ -5,21 +5,21 @@
 class Pwgen < Formula
   desc "A password generator with a few different variations."
   homepage "https://github.com/grimdork/pwgen"
-  version "1.0.1"
+  version "1.0.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/grimdork/pwgen/releases/download/v1.0.1/pwgen_1.0.1_Darwin_x86_64.tar.xz"
-      sha256 "283c675d9675bd1e0ae884a87ec841b0db40085983af39044bd769bc46929547"
+      url "https://github.com/grimdork/pwgen/releases/download/v1.0.4/pwgen_1.0.4_Darwin_x86_64.tar.xz"
+      sha256 "8802212ef18aa7b5c71d380b41369df51c549c93bcbfc12ae3a30e3408bc6633"
 
       def install
         bin.install "pwgen"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/grimdork/pwgen/releases/download/v1.0.1/pwgen_1.0.1_Darwin_arm64.tar.xz"
-      sha256 "cadc55c30909f1c791ef403d7479055fab770579da704d1cbd518f04f7b743f9"
+      url "https://github.com/grimdork/pwgen/releases/download/v1.0.4/pwgen_1.0.4_Darwin_arm64.tar.xz"
+      sha256 "d9a87b91bf58b6cd2081683efd980040858b015d7f3bd6d1c2eb3baec19b109e"
 
       def install
         bin.install "pwgen"
@@ -29,16 +29,16 @@ class Pwgen < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/grimdork/pwgen/releases/download/v1.0.1/pwgen_1.0.1_Linux_arm64.tar.xz"
-      sha256 "e1c847edec1692447cc12afcd5d1bd7203261ea4beb7ce4c0cddda7f7e144959"
+      url "https://github.com/grimdork/pwgen/releases/download/v1.0.4/pwgen_1.0.4_Linux_arm64.tar.xz"
+      sha256 "402854d7e2508b46a48bb09b614b5343be091a2e46e57c21ae88a2b0091ece80"
 
       def install
         bin.install "pwgen"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/grimdork/pwgen/releases/download/v1.0.1/pwgen_1.0.1_Linux_x86_64.tar.xz"
-      sha256 "beda5117373c7a415c8bd5f8ac75d981cd7da63b2a5e16f901e564f82ea1d203"
+      url "https://github.com/grimdork/pwgen/releases/download/v1.0.4/pwgen_1.0.4_Linux_x86_64.tar.xz"
+      sha256 "ded7e7939c11bf7a3b81a6ed6e053762e78aecc99a460a2366291401bfa5a60b"
 
       def install
         bin.install "pwgen"
