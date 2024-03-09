@@ -5,21 +5,21 @@
 class S3 < Formula
   desc "Simpler S3 commands with support for web protocols and SSH."
   homepage "https://github.com/grimdork/s3"
-  version "0.2.6"
+  version "0.2.7"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/grimdork/s3/releases/download/v0.2.6/s3_Darwin_arm64.tar.xz"
-      sha256 "5a0707cc9cf2c02c399271d8db2f8181fe712b2cf1e4875214e7c328d6e1f7d1"
+      url "https://github.com/grimdork/s3/releases/download/v0.2.7/s3_Darwin_arm64.tar.xz"
+      sha256 "35fa4a15457bbdbcec7cab65e3ca74055fe974dabc0bbb23064c8f3368a66bc3"
 
       def install
         bin.install "s3"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/grimdork/s3/releases/download/v0.2.6/s3_Darwin_x86_64.tar.xz"
-      sha256 "fe3aafa807fff5c622814ed575602f659cee08dc6d8d2ef09ff878840aa26100"
+      url "https://github.com/grimdork/s3/releases/download/v0.2.7/s3_Darwin_x86_64.tar.xz"
+      sha256 "96c53302538c98e4eec1a0ae23ac890ceaa3a94c6c4c18f634b6eb8fa18f0354"
 
       def install
         bin.install "s3"
@@ -29,16 +29,16 @@ class S3 < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/grimdork/s3/releases/download/v0.2.6/s3_Linux_arm64.tar.xz"
-      sha256 "54adeda5f4a0c70b994b6256ac8f304984a8ee021f90c33e57898b3d7c068c1f"
+      url "https://github.com/grimdork/s3/releases/download/v0.2.7/s3_Linux_arm64.tar.xz"
+      sha256 "ea5727f95c8d70ed7c8c797a6402b99d7c94dea98941b08b3a7754408e0604c3"
 
       def install
         bin.install "s3"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/grimdork/s3/releases/download/v0.2.6/s3_Linux_x86_64.tar.xz"
-      sha256 "1e55179f8aa7c7e411a8bf7c62548439d226386947f3a4645fdf5dd90acd41b7"
+      url "https://github.com/grimdork/s3/releases/download/v0.2.7/s3_Linux_x86_64.tar.xz"
+      sha256 "af72a4bea9a222e0488145ee19ab3ef0cf727856ecd6870b90671c45c9a9e19d"
 
       def install
         bin.install "s3"
