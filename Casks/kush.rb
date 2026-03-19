@@ -14,7 +14,7 @@ cask "kush" do
   on_macos do
     on_arm do
       url "https://github.com/grimdork/kush/releases/download/v#{version}/kush_#{version}_darwin_arm64.tar.gz"
-      sha256 "95675fe7625d27977e3c2c16a998fff89522e4d1a82084ff21a80958b9b7018e"
+      sha256 "9658cbb6a5556757b611dff71c570cd3fdf26b6199e0d164474d2b810e2ee3ca"
       rename "kush_0.3.0_darwin_arm64/kush", "kush"
     end
   end
