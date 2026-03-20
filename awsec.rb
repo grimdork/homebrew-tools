@@ -11,7 +11,7 @@ class Awsec < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/grimdork/awsec/releases/download/v0.12.0/awsec_0.12.0_darwin_amd64.tar.gz"
-      sha256 "eec90ea77eb8dbf28dda1d1446f4c1ac59b3269537cb3b8874c0c629d3176130"
+      sha256 "c8933a4221bbc9c1fceac9eb4c003c39bef631f3d464c4e3a494ebed5a27ab9e"
 
       define_method(:install) do
         bin.install "awsec"
@@ -19,7 +19,7 @@ class Awsec < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/grimdork/awsec/releases/download/v0.12.0/awsec_0.12.0_darwin_arm64.tar.gz"
-      sha256 "f11fc6b5dfc6fe3ea457c8240463d046d73a1f4178ae6e9cb63d66d78e486b59"
+      sha256 "136b47d0cf5cc5f0c9ab66d9b07c17a27a78796929e66adb64d22035ee3f1bec"
 
       define_method(:install) do
         bin.install "awsec"
@@ -30,14 +30,14 @@ class Awsec < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/grimdork/awsec/releases/download/v0.12.0/awsec_0.12.0_linux_amd64.tar.gz"
-      sha256 "2c94d026f343e39e18b05f9589d546c22e93d896a67a3cc09d284e912c6f5950"
+      sha256 "1ff606c4e6b784c1e07976c4734a589c2826b0bbeaa0decdca5360e2b0dd11a2"
       define_method(:install) do
         bin.install "awsec"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/grimdork/awsec/releases/download/v0.12.0/awsec_0.12.0_linux_arm64.tar.gz"
-      sha256 "88ec733500e37098201cdc573238b6b68c0daaafe524043bdecb3b71bdeefff7"
+      sha256 "da719fdc10173c561ed50409be84d7a5ef6bd86896a620ed1937234be1d49d29"
       define_method(:install) do
         bin.install "awsec"
       end
