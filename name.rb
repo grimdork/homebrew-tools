@@ -5,21 +5,21 @@
 class Name < Formula
   desc "Small utility for path/name manipulation"
   homepage "https://github.com/grimdork/name"
-  version "1.1.5"
+  version "1.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/grimdork/name/releases/download/v1.1.5/name_1.1.5_darwin_amd64.tar.gz"
-      sha256 "4595edd77d81965f569009e7a1ddf988f719b316492c98ee6ff3a3535eb90fe2"
+      url "https://github.com/grimdork/name/releases/download/v1.2.0/name_1.2.0_darwin_amd64.tar.gz"
+      sha256 "6eef1178872e15973c246ef8490834276b1eabacadeeda2dc4c8c51c8baeb042"
 
       define_method(:install) do
         bin.install "name"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/grimdork/name/releases/download/v1.1.5/name_1.1.5_darwin_arm64.tar.gz"
-      sha256 "9ff73bbde2f241836724c568cabbe1c0b735d5c77e4e257532dd75189bdb4c75"
+      url "https://github.com/grimdork/name/releases/download/v1.2.0/name_1.2.0_darwin_arm64.tar.gz"
+      sha256 "ce956859c0d64c836fcf50d0d447fed64c4aca6f61743a61df45744b855d86c0"
 
       define_method(:install) do
         bin.install "name"
@@ -29,15 +29,15 @@ class Name < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/grimdork/name/releases/download/v1.1.5/name_1.1.5_linux_amd64.tar.gz"
-      sha256 "4e4b5ff63df0426702f952dbafac3c1e1dad1686934b9ec50dff06850c8dcb20"
+      url "https://github.com/grimdork/name/releases/download/v1.2.0/name_1.2.0_linux_amd64.tar.gz"
+      sha256 "f5a41967eb90b369b93074c95b107fcfbb6ab2bbff29bcfba017e89c9c1ee705"
       define_method(:install) do
         bin.install "name"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/grimdork/name/releases/download/v1.1.5/name_1.1.5_linux_arm64.tar.gz"
-      sha256 "94db4c04afd5cf8469ddced5c3fd43381327143e574a19bf7f85b6287a0daeca"
+      url "https://github.com/grimdork/name/releases/download/v1.2.0/name_1.2.0_linux_arm64.tar.gz"
+      sha256 "e11f07dc2e68d29a99d90438484556f12e828cc3de6028767e63efe001e6124b"
       define_method(:install) do
         bin.install "name"
       end
