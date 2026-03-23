@@ -3,7 +3,7 @@ class Name < Formula
   homepage "https://github.com/grimdork/name"
   url "https://github.com/grimdork/name/releases/download/v1.4.0/name_v1.4.0_darwin_arm64.tar.gz"
   version "1.4.0"
-  sha256 "2a32bb9e1c070683c4122d57510463e2613d0d2a5f7b4baa19705ec72557d343"
+  sha256 "acd093c89d2e786a0075b7ca1fd921a088816fc2fdf79484a5a84362dd749ebc"
   license "MIT"
 
   def install
