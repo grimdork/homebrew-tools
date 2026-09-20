@@ -5,13 +5,13 @@
 class Asm68 < Formula
   desc "m68k assembler (asm68)"
   homepage "https://github.com/Urethramancer/m68k"
-  version "0.5.5"
+  version "0.6.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Urethramancer/m68k/releases/download/v0.5.5/m68k_0.5.5_darwin_amd64.tar.gz"
-      sha256 "dae01593b843a8db298d1ada274d312977bafab57faf1574280fa7756e5a0ecd"
+      url "https://github.com/Urethramancer/m68k/releases/download/v0.6.0/m68k_0.6.0_darwin_amd64.tar.gz"
+      sha256 "9eafe801796dfb70c407d7ac92f8bcfc49a7e84db59be771e33edb4d12ebcbaa"
 
       define_method(:install) do
         bin.install "asm68"
@@ -19,8 +19,8 @@ class Asm68 < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Urethramancer/m68k/releases/download/v0.5.5/m68k_0.5.5_darwin_arm64.tar.gz"
-      sha256 "a2d630be3bd513e7c8847dfa4c66a9c2a1bb308904fc360e34dcc3282ab41ab6"
+      url "https://github.com/Urethramancer/m68k/releases/download/v0.6.0/m68k_0.6.0_darwin_arm64.tar.gz"
+      sha256 "1593d083eb76aecbe1391adb8a47535a19b3870985fc7e38f13f39a23a15557b"
 
       define_method(:install) do
         bin.install "asm68"
@@ -31,16 +31,16 @@ class Asm68 < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Urethramancer/m68k/releases/download/v0.5.5/m68k_0.5.5_linux_amd64.tar.gz"
-      sha256 "fb6febf50cf88ed88fed1119d6f2bc182317587aa033029c0313c57aac4b41d9"
+      url "https://github.com/Urethramancer/m68k/releases/download/v0.6.0/m68k_0.6.0_linux_amd64.tar.gz"
+      sha256 "25722e4425b694db06c2954547e441fd31d9d6779a516240fcdd330100435228"
       define_method(:install) do
         bin.install "asm68"
         bin.install "dis68"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Urethramancer/m68k/releases/download/v0.5.5/m68k_0.5.5_linux_arm64.tar.gz"
-      sha256 "01505f1abe4d92e9b5b0f610e1f017dd3afbf7f8458c5990041ace0acfdceba6"
+      url "https://github.com/Urethramancer/m68k/releases/download/v0.6.0/m68k_0.6.0_linux_arm64.tar.gz"
+      sha256 "fa804be0a3c6d22aadc674c60f973a73d1e60243b970ab2dc88425db1c6136f2"
       define_method(:install) do
         bin.install "asm68"
         bin.install "dis68"
